@@ -1,0 +1,13 @@
+### Crear alumno
+
+POST http://localhost:8080/alumnos
+Content-Type: application/json
+
+{
+    "nombre": "Fio",
+    "correo": "Fio@correo.com"
+}
+
+### Obtener alumnos
+
+GET http://localhost:8080/alumnos
