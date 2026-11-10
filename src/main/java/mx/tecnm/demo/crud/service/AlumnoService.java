@@ -25,26 +25,8 @@ public class AlumnoService {
         return repository.save(alumno);
     }
 
-    public Alumno obtenerPorId(Long id) {
-        return repository.findById(id).orElse(null);
-    }
-
     public void eliminar(Long id) {
         repository.deleteById(id);
-    }
-
-    public Alumno actualizar(Long id, Alumno alumno) {
-
-        Alumno existente = repository.findById(id).orElse(null);
-
-        if (existente == null){
-            return null;
-        }
-
-        existente.setNombre(alumno.getNombre());
-        existente.setCorreo(alumno.getCorreo());
-
-        return repository.save(existente);
     }
 
 }

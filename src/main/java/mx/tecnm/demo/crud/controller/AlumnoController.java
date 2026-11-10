@@ -34,18 +34,9 @@ public class AlumnoController {
         return service.guardar(alumno);
     }
 
-    @GetMapping("/{id}")
-    public Alumno obtenerPorId(@PathVariable Long id) {
-        return service.obtenerPorId(id);
-    }
-
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable Long id) {
         service.eliminar(id);
     }
 
-    @PutMapping("/{id}")
-    public Alumno actualizar(@PathVariable Long id, @RequestBody Alumno alumno) {
-        return service.actualizar(id, alumno);
-    }
 }
